@@ -1,0 +1,4 @@
+D:\Projects\jenkins\dotnet project\calculator_application_jenkins\obj\Debug\net8.0\calculator_application_jenkins.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\jenkins\dotnet project\calculator_application_jenkins\obj\Debug\net8.0\calculator_application_jenkins.AssemblyInfoInputs.cache
+D:\Projects\jenkins\dotnet project\calculator_application_jenkins\obj\Debug\net8.0\calculator_application_jenkins.AssemblyInfo.cs
+D:\Projects\jenkins\dotnet project\calculator_application_jenkins\obj\Debug\net8.0\calculator_application_jenkins.csproj.CoreCompileInputs.cache
