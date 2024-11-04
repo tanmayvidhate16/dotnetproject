@@ -1,54 +1,53 @@
-﻿// Implementing a calculator in 
-// C# using switch statement.
 using System;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace calculator_application_jenkins
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			string value;
-			do
-			{
-				int res;
-				Console.Write("Enter first number:");
-				int num1 = Convert.ToInt32(Console.ReadLine());
-				Console.Write("Enter second number:");
-				int num2 = Convert.ToInt32(Console.ReadLine());
-				Console.Write("Enter symbol(/,+,-,*):");
-				string symbol = Console.ReadLine();
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Validate input parameters
+            if (args.Length != 3)
+            {
+                Console.WriteLine("Please provide two numbers and an operator.");
+                return;
+            }
 
-				switch (symbol)
-				{
-					case "+":
-						res = num1 + num2;
-						Console.WriteLine("Addition:" + res);
-						break;
-					case "-":
-						res = num1 - num2;
-						Console.WriteLine("Subtraction:" + res);
-						break;
-					case "*":
-						res = num1 * num2;
-						Console.WriteLine("Multiplication:" + res);
-						break;
-					case "/":
-						res = num1 / num2;
-						Console.WriteLine("Division:" + res);
-						break;
-					default:
-						Console.WriteLine("Wrong input");
-						break;
-				}
-				Console.ReadLine();
-				Console.Write("Do you want to continue(y/n):");
-				value = Console.ReadLine();
-			}
-			while (value=="y" || value=="Y");
-		}
-	}
+            int num1 = Convert.ToInt32(args[0]);
+            int num2 = Convert.ToInt32(args[1]);
+            string symbol = args[2];
 
+            int res;
+
+            switch (symbol)
+            {
+                case "+":
+                    res = num1 + num2;
+                    Console.WriteLine("Addition: " + res);
+                    break;
+                case "-":
+                    res = num1 - num2;
+                    Console.WriteLine("Subtraction: " + res);
+                    break;
+                case "*":
+                    res = num1 * num2;
+                    Console.WriteLine("Multiplication: " + res);
+                    break;
+                case "/":
+                    if (num2 != 0)
+                    {
+                        res = num1 / num2;
+                        Console.WriteLine("Division: " + res);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: Division by zero.");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Wrong input");
+                    break;
+            }
+        }
+    }
 }
